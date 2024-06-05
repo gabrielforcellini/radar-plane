@@ -92,7 +92,7 @@ public class TMain extends JFrame {
 		scpPlane = new JScrollPane(tblPlane);
 
 		btnAdd = new JButton();
-		btnAdd.setText("Adicionar");
+		btnAdd.setText("Inserir");
 		btnAdd.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				setEnableBtnAdd(false);
@@ -152,7 +152,7 @@ public class TMain extends JFrame {
 
 		btnDistAirport = new JButton();
 		btnDistAirport.setBackground(colorSecondButton);
-		btnDistAirport.setText("Aeroporto");
+		btnDistAirport.setText("Distância Min. Aeroporto");
 		btnDistAirport.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				Relatorio.distanciaAeoporto(planeTableModel, txtReport);
@@ -161,7 +161,7 @@ public class TMain extends JFrame {
 
 		btnDistPlanes = new JButton();
 		btnDistPlanes.setBackground(colorSecondButton);
-		btnDistPlanes.setText("Distância do Avião");
+		btnDistPlanes.setText("Distância Mínima Aviões Próx.");
 		btnDistPlanes.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				Relatorio.distanciaAvioes(planeTableModel, txtReport);
@@ -170,7 +170,7 @@ public class TMain extends JFrame {
 
 		btnCollisionCourse = new JButton();
 		btnCollisionCourse.setBackground(colorSecondButton);
-		btnCollisionCourse.setText("Em rota de Colisão");
+		btnCollisionCourse.setText("Tempo Mín. em rota de Colisão");
 		btnCollisionCourse.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				Relatorio.tempColisao(planeTableModel, txtReport);
@@ -394,7 +394,7 @@ public class TMain extends JFrame {
 			planeTableModel.removeAviao(linhaSelecionada);
 			updateTable();
 		} else {
-			JOptionPane.showMessageDialog(null, "Necessário selecionar um avião");
+			JOptionPane.showMessageDialog(null, "É necessário selecionar um avião");
 		}
 	};
 
@@ -421,7 +421,7 @@ public class TMain extends JFrame {
 		int selectedLine[] = tblPlane.getSelectedRows();
 
 		if (selectedLine.length < 1) {
-			JOptionPane.showMessageDialog(null, "Necessário selecionar um avião");
+			JOptionPane.showMessageDialog(null, "É necessário selecionar um avião");
 			return;
 		}
 
@@ -488,7 +488,7 @@ public class TMain extends JFrame {
 		int selectedLine[] = tblPlane.getSelectedRows();
 
 		if (selectedLine.length < 1) {
-			JOptionPane.showMessageDialog(null, "Necessário selecionar um avião!");
+			JOptionPane.showMessageDialog(null, "É necessário selecionar um avião!");
 			return;
 		}
 
@@ -506,7 +506,7 @@ public class TMain extends JFrame {
 		int selectedLine[] = tblPlane.getSelectedRows();
 
 		if (selectedLine.length < 1) {
-			JOptionPane.showMessageDialog(null, "Necessário selecionar um avião!");
+			JOptionPane.showMessageDialog(null, "É necessário selecionar um avião!");
 			return;
 		}
 

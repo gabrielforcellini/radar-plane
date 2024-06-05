@@ -29,8 +29,7 @@ import classes.Aviao;
 import main.Calculo;
 
 public class TAdcAviao extends JDialog {
-
-    private javax.swing.JPanel pnlLayout;
+	private javax.swing.JPanel pnlLayout;
 	private static final long serialVersionUID = 1L;
 	private final JPanel pnlPrincipal = new JPanel();
 	private JTextField edtX;
@@ -127,7 +126,6 @@ public class TAdcAviao extends JDialog {
 		edtDirecao = new JTextField();
 		edtDirecao.setColumns(10);
 
-
 		pnlButton = new JPanel();
 		getContentPane().add(pnlButton, BorderLayout.SOUTH);
 		pnlButton.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
@@ -136,94 +134,103 @@ public class TAdcAviao extends JDialog {
 		pnlButton.add(btnSalvar);
 		getRootPane().setDefaultButton(btnSalvar);
 
-
-        btnCancel = new JButton("Cancelar");
+		btnCancel = new JButton("Cancelar");
 		btnCancel.setActionCommand("Cancel");
 		pnlButton.add(btnCancel);
-
 
 		GroupLayout gl_pnlPrincipal = new GroupLayout(pnlPrincipal);
 		pnlLayout.setLayout(gl_pnlPrincipal);
 		gl_pnlPrincipal.setHorizontalGroup(
-			gl_pnlPrincipal.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_pnlPrincipal.createSequentialGroup()
-					.addContainerGap()
-					.addGroup(gl_pnlPrincipal.createParallelGroup(Alignment.LEADING)
+				gl_pnlPrincipal.createParallelGroup(Alignment.LEADING)
 						.addGroup(gl_pnlPrincipal.createSequentialGroup()
-							.addGroup(gl_pnlPrincipal.createParallelGroup(Alignment.TRAILING)
-								.addGroup(gl_pnlPrincipal.createSequentialGroup()
-									.addGroup(gl_pnlPrincipal.createParallelGroup(Alignment.LEADING, false)
-										.addComponent(lblRaio, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-										.addComponent(lblX, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-										.addComponent(lblVelocidade, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-									.addGap(4)
-									.addGroup(gl_pnlPrincipal.createParallelGroup(Alignment.LEADING, false)
-										.addComponent(edtX, 0, 0, Short.MAX_VALUE)
-										.addComponent(edtRaio, 0, 0, Short.MAX_VALUE)
-										.addComponent(edtVelocidade, GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)))
-								.addComponent(rdbCartesiana))
-							.addGroup(gl_pnlPrincipal.createParallelGroup(Alignment.LEADING)
-								.addGroup(gl_pnlPrincipal.createSequentialGroup()
-									.addGap(15)
-									.addGroup(gl_pnlPrincipal.createParallelGroup(Alignment.LEADING, false)
+								.addContainerGap()
+								.addGroup(gl_pnlPrincipal.createParallelGroup(Alignment.LEADING)
 										.addGroup(gl_pnlPrincipal.createSequentialGroup()
-											.addComponent(lblDirecao, GroupLayout.PREFERRED_SIZE, 82, GroupLayout.PREFERRED_SIZE)
-											.addPreferredGap(ComponentPlacement.RELATED)
-											.addComponent(edtDirecao, 0, 0, Short.MAX_VALUE))
-										.addGroup(gl_pnlPrincipal.createSequentialGroup()
-											.addComponent(lblAngulo, GroupLayout.PREFERRED_SIZE, 82, GroupLayout.PREFERRED_SIZE)
-											.addPreferredGap(ComponentPlacement.RELATED)
-											.addComponent(edtAngulo, 0, 0, Short.MAX_VALUE))
-										.addGroup(gl_pnlPrincipal.createSequentialGroup()
-											.addComponent(lblY, GroupLayout.PREFERRED_SIZE, 82, GroupLayout.PREFERRED_SIZE)
-											.addPreferredGap(ComponentPlacement.RELATED)
-											.addComponent(edtY, GroupLayout.PREFERRED_SIZE, 75, GroupLayout.PREFERRED_SIZE))))
-								.addGroup(gl_pnlPrincipal.createSequentialGroup()
-									.addGap(61)
-									.addComponent(rdbPolar)))
-							.addGap(11))
-						.addComponent(pnlTitle, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 362, Short.MAX_VALUE))
-					.addContainerGap())
-		);
+												.addGroup(gl_pnlPrincipal.createParallelGroup(Alignment.TRAILING)
+														.addGroup(gl_pnlPrincipal.createSequentialGroup()
+																.addGroup(gl_pnlPrincipal.createParallelGroup(Alignment.LEADING, false)
+																		.addComponent(lblRaio, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE,
+																				Short.MAX_VALUE)
+																		.addComponent(lblX, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE,
+																				Short.MAX_VALUE)
+																		.addComponent(lblVelocidade, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE,
+																				Short.MAX_VALUE))
+																.addGap(4)
+																.addGroup(gl_pnlPrincipal.createParallelGroup(Alignment.LEADING, false)
+																		.addComponent(edtX, 0, 0, Short.MAX_VALUE)
+																		.addComponent(edtRaio, 0, 0, Short.MAX_VALUE)
+																		.addComponent(edtVelocidade, GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)))
+														.addComponent(rdbCartesiana))
+												.addGroup(gl_pnlPrincipal.createParallelGroup(Alignment.LEADING)
+														.addGroup(gl_pnlPrincipal.createSequentialGroup()
+																.addGap(15)
+																.addGroup(gl_pnlPrincipal.createParallelGroup(Alignment.LEADING, false)
+																		.addGroup(gl_pnlPrincipal.createSequentialGroup()
+																				.addComponent(lblDirecao, GroupLayout.PREFERRED_SIZE, 82,
+																						GroupLayout.PREFERRED_SIZE)
+																				.addPreferredGap(ComponentPlacement.RELATED)
+																				.addComponent(edtDirecao, 0, 0, Short.MAX_VALUE))
+																		.addGroup(gl_pnlPrincipal.createSequentialGroup()
+																				.addComponent(lblAngulo, GroupLayout.PREFERRED_SIZE, 82,
+																						GroupLayout.PREFERRED_SIZE)
+																				.addPreferredGap(ComponentPlacement.RELATED)
+																				.addComponent(edtAngulo, 0, 0, Short.MAX_VALUE))
+																		.addGroup(gl_pnlPrincipal.createSequentialGroup()
+																				.addComponent(lblY, GroupLayout.PREFERRED_SIZE, 82, GroupLayout.PREFERRED_SIZE)
+																				.addPreferredGap(ComponentPlacement.RELATED)
+																				.addComponent(edtY, GroupLayout.PREFERRED_SIZE, 75,
+																						GroupLayout.PREFERRED_SIZE))))
+														.addGroup(gl_pnlPrincipal.createSequentialGroup()
+																.addGap(61)
+																.addComponent(rdbPolar)))
+												.addGap(11))
+										.addComponent(pnlTitle, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 362, Short.MAX_VALUE))
+								.addContainerGap()));
 		gl_pnlPrincipal.setVerticalGroup(
-			gl_pnlPrincipal.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_pnlPrincipal.createSequentialGroup()
-					.addContainerGap()
-					.addComponent(pnlTitle, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.UNRELATED)
-					.addGroup(gl_pnlPrincipal.createParallelGroup(Alignment.BASELINE)
-						.addComponent(rdbCartesiana)
-						.addComponent(rdbPolar))
-					.addGap(18)
-					.addGroup(gl_pnlPrincipal.createParallelGroup(Alignment.TRAILING)
+				gl_pnlPrincipal.createParallelGroup(Alignment.LEADING)
 						.addGroup(gl_pnlPrincipal.createSequentialGroup()
-							.addGroup(gl_pnlPrincipal.createParallelGroup(Alignment.TRAILING)
-								.addComponent(edtX, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblX))
-							.addGap(18)
-							.addGroup(gl_pnlPrincipal.createParallelGroup(Alignment.LEADING)
-								.addComponent(lblRaio, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
-								.addComponent(edtRaio, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-							.addGap(18)
-							.addGroup(gl_pnlPrincipal.createParallelGroup(Alignment.BASELINE)
-								.addComponent(lblVelocidade, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
-								.addComponent(edtVelocidade, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-						.addGroup(gl_pnlPrincipal.createSequentialGroup()
-							.addGroup(gl_pnlPrincipal.createParallelGroup(Alignment.LEADING)
-								.addComponent(lblY, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
-								.addComponent(edtY, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-							.addGap(18)
-							.addGroup(gl_pnlPrincipal.createParallelGroup(Alignment.LEADING)
-								.addComponent(lblAngulo, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
-								.addComponent(edtAngulo, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-							.addGap(18)
-							.addGroup(gl_pnlPrincipal.createParallelGroup(Alignment.LEADING)
-								.addGroup(gl_pnlPrincipal.createSequentialGroup()
-									.addGap(2)
-									.addComponent(edtDirecao, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-								.addComponent(lblDirecao, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE))))
-					.addContainerGap(13, Short.MAX_VALUE))
-		);
+								.addContainerGap()
+								.addComponent(pnlTitle, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+										GroupLayout.PREFERRED_SIZE)
+								.addPreferredGap(ComponentPlacement.UNRELATED)
+								.addGroup(gl_pnlPrincipal.createParallelGroup(Alignment.BASELINE)
+										.addComponent(rdbCartesiana)
+										.addComponent(rdbPolar))
+								.addGap(18)
+								.addGroup(gl_pnlPrincipal.createParallelGroup(Alignment.TRAILING)
+										.addGroup(gl_pnlPrincipal.createSequentialGroup()
+												.addGroup(gl_pnlPrincipal.createParallelGroup(Alignment.TRAILING)
+														.addComponent(edtX, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+																GroupLayout.PREFERRED_SIZE)
+														.addComponent(lblX))
+												.addGap(18)
+												.addGroup(gl_pnlPrincipal.createParallelGroup(Alignment.LEADING)
+														.addComponent(lblRaio, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
+														.addComponent(edtRaio, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+																GroupLayout.PREFERRED_SIZE))
+												.addGap(18)
+												.addGroup(gl_pnlPrincipal.createParallelGroup(Alignment.BASELINE)
+														.addComponent(lblVelocidade, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
+														.addComponent(edtVelocidade, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+																GroupLayout.PREFERRED_SIZE)))
+										.addGroup(gl_pnlPrincipal.createSequentialGroup()
+												.addGroup(gl_pnlPrincipal.createParallelGroup(Alignment.LEADING)
+														.addComponent(lblY, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
+														.addComponent(edtY, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+																GroupLayout.PREFERRED_SIZE))
+												.addGap(18)
+												.addGroup(gl_pnlPrincipal.createParallelGroup(Alignment.LEADING)
+														.addComponent(lblAngulo, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE)
+														.addComponent(edtAngulo, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+																GroupLayout.PREFERRED_SIZE))
+												.addGap(18)
+												.addGroup(gl_pnlPrincipal.createParallelGroup(Alignment.LEADING)
+														.addGroup(gl_pnlPrincipal.createSequentialGroup()
+																.addGap(2)
+																.addComponent(edtDirecao, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+																		GroupLayout.PREFERRED_SIZE))
+														.addComponent(lblDirecao, GroupLayout.PREFERRED_SIZE, 20, GroupLayout.PREFERRED_SIZE))))
+								.addContainerGap(13, Short.MAX_VALUE)));
 		pnlPrincipal.setLayout(gl_pnlPrincipal);
 
 		btnSalvar.addActionListener(new ActionListener() {
@@ -290,7 +297,7 @@ public class TAdcAviao extends JDialog {
 				aviao.setPontoX(Double.parseDouble(edtX.getText()));
 				aviao.setPontoY(Double.parseDouble(edtY.getText()));
 				aviao = Calculo.cartersianoParaPolar(aviao);
-			}else{
+			} else {
 				aviao.setAngulo(Double.parseDouble(edtAngulo.getText()));
 				aviao.setRaio(Double.parseDouble(edtRaio.getText()));
 				Calculo.polarParaCartesiano(aviao);

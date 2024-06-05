@@ -107,9 +107,9 @@ public class Relatorio {
 		Double distancia = 0.0;
 		txtReport.setText(null);
 		try {
-			distancia = Double.parseDouble(JOptionPane.showInputDialog("informe a distância mínima até o aeroporto (km)"));
+			distancia = Double.parseDouble(JOptionPane.showInputDialog("informe a distância mínima até o aeroporto (km)."));
 		} catch (NumberFormatException e) {
-			JOptionPane.showMessageDialog(null, "Insira um valor válido" + e);
+			JOptionPane.showMessageDialog(null, "Insira um valor válido." + e);
 		}
 
 		StringBuilder stringBuilder = new StringBuilder();
