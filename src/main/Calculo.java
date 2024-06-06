@@ -21,13 +21,13 @@ public class Calculo {
 		aviao.setPontoY(formatarDecimal(aviao.getPontoY() * auxY));
 	}
 	
-	//faz com que o avião "voe" para outra posição
+	//faz com que o aviï¿½o "voe" para outra posiï¿½ï¿½o
 	public static void transladar(Aviao aviao, double somaX, double somaY) {
 		aviao.setPontoX(formatarDecimal(aviao.getPontoX() + somaX));
 		aviao.setPontoY(formatarDecimal(aviao.getPontoY() + somaY));
 	}
 	
-	//faz com que o avião altere sua rotação
+	//faz com que o aviï¿½o altere sua rotaï¿½ï¿½o
 	public static void rotacionar(Aviao aviao, double cordX, double cordY, double angulo) {
 		
 		//caso a cordenada seja maior que 0, altera para negativo, caso contrario, mantem
@@ -48,21 +48,22 @@ public class Calculo {
 		aviao.setPontoX(novoX);
 		aviao.setPontoY(novoY);
 		
-		//voltar a translação
+		//voltar a translaï¿½ï¿½o
 		auxX = auxX * -1;
 		auxY = auxY * -1;
 		
 		transladar(aviao, auxX, auxY);
+		aviao = cartersianoParaPolar(aviao);
 	}
 	
 	//calculo de distancia: sqrt faz calculo de raiz
-	//logo é feito, x1-x2 * x1-x2 para representar o quadrado
+	//logo ï¿½ feito, x1-x2 * x1-x2 para representar o quadrado
 	public static double distancia(double x1, double y1, double x2, double y2) {
 		return Math.sqrt(((x1 - x2) * (x1 - x2)) + ((y1 - y2) * (y1 - y2)));
 	}
 	
 	
-	//calcula-se o raio que é raiz quadrada de (x ao quadro + y ao quadro)
+	//calcula-se o raio que ï¿½ raiz quadrada de (x ao quadro + y ao quadro)
 	//calcula-se a tangente, math.atan faz o calculo da tangente de (y/x)
 	public static Aviao cartersianoParaPolar(Aviao a) {
 		double raio, angulo;
@@ -96,14 +97,14 @@ public class Calculo {
 		info.setAviaoB(b.getCodigo());
 		
 		
-		//converte a direçãoe em radianos e depois aplica o valor na tangente, achando assim o m 
+		//converte a direï¿½ï¿½oe em radianos e depois aplica o valor na tangente, achando assim o m 
 		double radianoA = Math.toRadians(a.getDirecao());    
 		double tangenteA = Math.tan(radianoA);               
 		
 		double radianoB = Math.toRadians(b.getDirecao());     
 		double tangenteB = Math.tan(radianoB);
 		
-		//calcula a equação do aviao A e B  - (y2 - y1) = m(x2 - x1) -- com o y2 não "existe" podemos deixar com o valor 1
+		//calcula a equaï¿½ï¿½o do aviao A e B  - (y2 - y1) = m(x2 - x1) -- com o y2 nï¿½o "existe" podemos deixar com o valor 1
 		double y = 1;
 		double x = 1;
 		
@@ -130,13 +131,13 @@ public class Calculo {
 		double tempoA = converterSegundos(distanciaA / a.getVelocidade());
 		double tempoB = converterSegundos(distanciaB / b.getVelocidade());
 		
-		//caso a velocidade de a for maior que a b, então velocidade de A - velocidade de B
-		//se não, velocidade de B - velocidade de A
+		//caso a velocidade de a for maior que a b, entï¿½o velocidade de A - velocidade de B
+		//se nï¿½o, velocidade de B - velocidade de A
 		double diferencaTempo = (tempoA > tempoB) ? tempoA - tempoB : tempoB - tempoA;
 		info.setDiferencaTempo(formatarDecimal(diferencaTempo));
 		
-		//se velocidade de A for maior que velocidade de B, então velocidade de B
-		//se não, velocidade de A
+		//se velocidade de A for maior que velocidade de B, entï¿½o velocidade de B
+		//se nï¿½o, velocidade de A
 		double tempoColisao = (tempoA > tempoB) ? tempoB : tempoA;
 		info.setTempoColisao(formatarDecimal(tempoColisao));
 		
