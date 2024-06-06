@@ -31,6 +31,8 @@ import main.Relatorio;
 
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
+
+import java.awt.Color;
 import java.awt.Font;
 
 public class TMain extends JFrame {
@@ -73,7 +75,7 @@ public class TMain extends JFrame {
 		avioes = new ArrayList<>();
 
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		setTitle("Plane radar");
+		setTitle("Radar Plane");
 
 		pnlLayout = new JPanel();
 		pnlLayout.setPreferredSize(new java.awt.Dimension(900, 600));
@@ -110,7 +112,7 @@ public class TMain extends JFrame {
 
 		lblReport = new JLabel();
 		lblReport.setFont(new Font("Arial", Font.BOLD, 20));
-		lblReport.setText("Relatorio");
+		lblReport.setText("Relatório");
 
 		pnlRadar = new JPanel();
 		pnlRadar.setBackground(colorTables);
@@ -125,6 +127,7 @@ public class TMain extends JFrame {
 
 		btnScale = new JButton();
 		btnScale.setBackground(colorFirstButton);
+		btnScale.setForeground(Color.BLACK);
 		btnScale.setText("Escalonar");
 		btnScale.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -134,6 +137,7 @@ public class TMain extends JFrame {
 
 		btnTranslate = new JButton();
 		btnTranslate.setBackground(colorFirstButton);
+		btnTranslate.setForeground(Color.BLACK);
 		btnTranslate.setText("Translandar");
 		btnTranslate.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,6 +147,7 @@ public class TMain extends JFrame {
 
 		btnRotate = new JButton();
 		btnRotate.setBackground(colorFirstButton);
+		btnRotate.setForeground(Color.BLACK);
 		btnRotate.setText("Rotacionar");
 		btnRotate.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,6 +157,7 @@ public class TMain extends JFrame {
 
 		btnDistAirport = new JButton();
 		btnDistAirport.setBackground(colorSecondButton);
+		btnDistAirport.setForeground(Color.BLACK);
 		btnDistAirport.setText("Distância Min. Aeroporto");
 		btnDistAirport.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -161,6 +167,7 @@ public class TMain extends JFrame {
 
 		btnDistPlanes = new JButton();
 		btnDistPlanes.setBackground(colorSecondButton);
+		btnDistPlanes.setForeground(Color.BLACK);
 		btnDistPlanes.setText("Distância Mínima Aviões Próx.");
 		btnDistPlanes.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -170,6 +177,7 @@ public class TMain extends JFrame {
 
 		btnCollisionCourse = new JButton();
 		btnCollisionCourse.setBackground(colorSecondButton);
+		btnCollisionCourse.setForeground(Color.BLACK);
 		btnCollisionCourse.setText("Tempo Mín. em rota de Colisão");
 		btnCollisionCourse.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {

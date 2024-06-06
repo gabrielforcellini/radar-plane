@@ -13,9 +13,9 @@ public class TEscalonar extends javax.swing.JFrame {
 
     private javax.swing.JButton btnCancel;
     private javax.swing.JButton btnScale;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel lblPercentX;
+    private javax.swing.JLabel lblPercentY;
+    private javax.swing.JLabel lblScale;
     private javax.swing.JPanel pnlLayout;
     private javax.swing.JTextField txtX;
     private javax.swing.JTextField txtY;
@@ -32,14 +32,14 @@ public class TEscalonar extends javax.swing.JFrame {
         pnlLayout = new javax.swing.JPanel();
         pnlLayout.setPreferredSize(new java.awt.Dimension(400, 300));
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        lblPercentX = new javax.swing.JLabel();
+        lblPercentY = new javax.swing.JLabel();
+        lblScale = new javax.swing.JLabel();
 
-        jLabel1.setText("X(%) :");
-        jLabel2.setText("Y(%) :");
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14));
-        jLabel3.setText("Scale");
+        lblPercentX.setText("X(%) :");
+        lblPercentY.setText("Y(%) :");
+        lblScale.setFont(new java.awt.Font("Arial", 1, 14));
+        lblScale.setText("Scale");
 
         txtX = new javax.swing.JTextField();
         txtY = new javax.swing.JTextField();
@@ -76,33 +76,33 @@ public class TEscalonar extends javax.swing.JFrame {
                                                 .addGap(18, 18, 18)
                                                 .addComponent(btnCancel))
                                         .addGroup(pnlLayoutLayout.createSequentialGroup()
-                                                .addComponent(jLabel1)
+                                                .addComponent(lblPercentX)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                                 .addComponent(txtX, javax.swing.GroupLayout.PREFERRED_SIZE, 50,
                                                         javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(18, 18, 18)
-                                                .addComponent(jLabel2)
+                                                .addComponent(lblPercentY)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                                 .addComponent(txtY, javax.swing.GroupLayout.PREFERRED_SIZE, 50,
                                                         javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addContainerGap(49, Short.MAX_VALUE))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlLayoutLayout.createSequentialGroup()
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel3)
+                                .addComponent(lblScale)
                                 .addGap(119, 119, 119)));
         pnlLayoutLayout.setVerticalGroup(
                 pnlLayoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(pnlLayoutLayout.createSequentialGroup()
                                 .addGap(22, 22, 22)
-                                .addComponent(jLabel3)
+                                .addComponent(lblScale)
                                 .addGap(18, 18, 18)
                                 .addGroup(
                                         pnlLayoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                .addComponent(jLabel1)
+                                                .addComponent(lblPercentX)
                                                 .addComponent(txtX, javax.swing.GroupLayout.PREFERRED_SIZE,
                                                         javax.swing.GroupLayout.DEFAULT_SIZE,
                                                         javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jLabel2)
+                                                .addComponent(lblPercentY)
                                                 .addComponent(txtY, javax.swing.GroupLayout.PREFERRED_SIZE,
                                                         javax.swing.GroupLayout.DEFAULT_SIZE,
                                                         javax.swing.GroupLayout.PREFERRED_SIZE))
