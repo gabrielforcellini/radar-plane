@@ -19,12 +19,14 @@ public class Calculo {
 
 		aviao.setPontoX(formatarDecimal(aviao.getPontoX() * auxX));
 		aviao.setPontoY(formatarDecimal(aviao.getPontoY() * auxY));
+		cartersianoParaPolar(aviao);
 	}
 
 	// faz com que o avião "voe" para outra posição
 	public static void transladar(Aviao aviao, double somaX, double somaY) {
 		aviao.setPontoX(formatarDecimal(aviao.getPontoX() + somaX));
 		aviao.setPontoY(formatarDecimal(aviao.getPontoY() + somaY));
+		cartersianoParaPolar(aviao);
 	}
 
 	// faz com que o avião altere sua rotação
