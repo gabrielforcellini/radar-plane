@@ -41,23 +41,23 @@ public class TTranslandar extends javax.swing.JFrame {
         btnTranslate = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Translate");
+        setTitle("Transladar");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14));
-        jLabel1.setText("Translandar");
+        jLabel1.setText("Transladar");
 
         jLabel2.setText("X:");
 
         jLabel3.setText("Y:");
 
-        btnCancel.setText("Cancel");
+        btnCancel.setText("Cancelar");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelActionPerformed(evt);
             }
         });
 
-        btnTranslate.setText("Translate");
+        btnTranslate.setText("Transladar");
         btnTranslate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTranslateActionPerformed(evt);
@@ -133,13 +133,13 @@ public class TTranslandar extends javax.swing.JFrame {
 
     private void btnTranslateActionPerformed(java.awt.event.ActionEvent evt) {
         if (txtX.getText().trim().equals("")) {
-            JOptionPane.showMessageDialog(null, "Enter the value of X.");
+            JOptionPane.showMessageDialog(null, "Informe um valor para X.");
             txtX.selectAll();
             return;
         }
 
         if (txtY.getText().trim().equals("")) {
-            JOptionPane.showMessageDialog(null, "Enter the value of Y.");
+            JOptionPane.showMessageDialog(null, "Informe um valor para Y.");
             txtY.selectAll();
             return;
         }
@@ -149,7 +149,7 @@ public class TTranslandar extends javax.swing.JFrame {
         try {
             x = Double.parseDouble(txtX.getText().trim());
         } catch (NumberFormatException ex) {
-            JOptionPane.showMessageDialog(null, "Enter a valid value for X.");
+            JOptionPane.showMessageDialog(null, "Informe um valor para X.");
             txtX.selectAll();
             return;
         }
@@ -157,7 +157,7 @@ public class TTranslandar extends javax.swing.JFrame {
         try {
             y = Double.parseDouble(txtY.getText().trim());
         } catch (NumberFormatException ex) {
-            JOptionPane.showMessageDialog(null, "Enter a valid value for Y.");
+            JOptionPane.showMessageDialog(null, "Informe um valor para Y.");
             txtY.selectAll();
             return;
         }

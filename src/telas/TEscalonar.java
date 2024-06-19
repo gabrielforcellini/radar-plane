@@ -39,16 +39,16 @@ public class TEscalonar extends javax.swing.JFrame {
         lblPercentX.setText("X(%) :");
         lblPercentY.setText("Y(%) :");
         lblScale.setFont(new java.awt.Font("Arial", 1, 14));
-        lblScale.setText("Scale");
+        lblScale.setText("Escalonar");
 
         txtX = new javax.swing.JTextField();
         txtY = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Scale");
+        setTitle("Escalonar");
 
         btnScale = new javax.swing.JButton();
-        btnScale.setText("Scale");
+        btnScale.setText("Escalonar");
         btnScale.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnScaleActionPerformed(evt);
@@ -56,7 +56,7 @@ public class TEscalonar extends javax.swing.JFrame {
         });
 
         btnCancel = new javax.swing.JButton();
-        btnCancel.setText("Cancel");
+        btnCancel.setText("Cancelar");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelActionPerformed(evt);
