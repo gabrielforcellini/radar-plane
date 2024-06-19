@@ -50,28 +50,28 @@ public class TRotacionar extends javax.swing.JFrame {
         txtY = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Rotate");
+        setTitle("Rotacionar");
 
-        jLabel1.setText("Angle:");
+        jLabel1.setText("Angulo:");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setText("Rotate");
+        jLabel2.setText("Rotacionar");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel3.setText("Center in");
+        jLabel3.setText("Centro em");
 
         jLabel4.setText("X:");
 
         jLabel5.setText("Y:");
 
-        btnRotate.setText("Rotate");
+        btnRotate.setText("Rotacionar");
         btnRotate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRotateActionPerformed(evt);
             }
         });
 
-        btnCancel.setText("Cancel");
+        btnCancel.setText("Cancelar");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelActionPerformed(evt);
@@ -171,13 +171,13 @@ public class TRotacionar extends javax.swing.JFrame {
         }
 
         if (txtY.getText().trim().equals("")) {
-            JOptionPane.showMessageDialog(null, "Insira um valor v�lido para Y.");
+            JOptionPane.showMessageDialog(null, "Insira um valor válido para Y.");
             txtY.selectAll();
             return;
         }
 
         if (txtAngle.getText().trim().equals("")) {
-            JOptionPane.showMessageDialog(null, "Insira o valor do �ngulo.");
+            JOptionPane.showMessageDialog(null, "Insira o valor do angulo.");
             txtAngle.selectAll();
             return;
         }
@@ -187,7 +187,7 @@ public class TRotacionar extends javax.swing.JFrame {
         try {
             x = Double.parseDouble(txtX.getText().trim());
         } catch (NumberFormatException ex) {
-            JOptionPane.showMessageDialog(null, "Insira um valor v�lido para X.");
+            JOptionPane.showMessageDialog(null, "Insira um valor válido para X.");
             txtX.selectAll();
             return;
         }
@@ -195,7 +195,7 @@ public class TRotacionar extends javax.swing.JFrame {
         try {
             y = Double.parseDouble(txtY.getText().trim());
         } catch (NumberFormatException ex) {
-            JOptionPane.showMessageDialog(null, "Insira um valor v�lido para Y.");
+            JOptionPane.showMessageDialog(null, "Insira um valor válido para Y.");
             txtY.selectAll();
             return;
         }
@@ -203,7 +203,7 @@ public class TRotacionar extends javax.swing.JFrame {
         try {
             angulo = Double.parseDouble(txtAngle.getText().trim());
         } catch (NumberFormatException ex) {
-            JOptionPane.showMessageDialog(null, "Informe um valor de �ngulo v�lido.");
+            JOptionPane.showMessageDialog(null, "Informe um valor de angulo válido.");
             txtAngle.selectAll();
             return;
         }
