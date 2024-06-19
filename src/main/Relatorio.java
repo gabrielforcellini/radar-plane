@@ -18,11 +18,15 @@ public class Relatorio {
 		}
 
 		double tempoMinimo;
+		String texto;
 		txtReport.setText(null);
 
 		try {
-			tempoMinimo = Double
-					.parseDouble(JOptionPane.showInputDialog("Distância mínima para alertar a colisão (Segundos):"));
+			texto = JOptionPane.showInputDialog("Distância mínima para alertar a colisão (Segundos):");
+			if (texto == null) {
+				return;
+			}
+			tempoMinimo = Double.parseDouble(texto);
 		} catch (NumberFormatException ex) {
 			JOptionPane.showMessageDialog(null, "Insira um valor válido");
 			return;
@@ -59,14 +63,18 @@ public class Relatorio {
 
 	public static void distanciaAvioes(TAviaoTableModel planeTableModel, JTextArea txtReport) {
 		Double distancia = 0.0;
+		String texto;
 		StringBuilder stringBuilder = new StringBuilder();
 		HashMap<Integer, Integer> map = new HashMap<>();
 
 		try {
-			distancia = Double
-					.parseDouble(JOptionPane.showInputDialog("informar a distância mínima entre as aeronaves! (km)"));
+			texto = JOptionPane.showInputDialog("informar a distância mínima entre as aeronaves! (km)");
+			if (texto == null) {
+				return;
+			}
+			distancia = Double.parseDouble(texto);
 		} catch (NumberFormatException e) {
-			JOptionPane.showMessageDialog(null, "Enter valid value" + e);
+			JOptionPane.showMessageDialog(null, "Insira um valor válido" + e);
 		}
 
 		for (int i = 0; i < planeTableModel.getRowCount(); i++) {
@@ -105,9 +113,14 @@ public class Relatorio {
 
 	public static void distanciaAeoporto(TAviaoTableModel planeTableModel, JTextArea txtReport) {
 		Double distancia = 0.0;
+		String texto;
 		txtReport.setText(null);
 		try {
-			distancia = Double.parseDouble(JOptionPane.showInputDialog("informe a distância mínima até o aeroporto (km)."));
+			texto = JOptionPane.showInputDialog("informe a distância mínima até o aeroporto (km).");
+			if (texto == null) {
+				return;
+			}
+			distancia = Double.parseDouble(texto);
 		} catch (NumberFormatException e) {
 			JOptionPane.showMessageDialog(null, "Insira um valor válido." + e);
 		}
