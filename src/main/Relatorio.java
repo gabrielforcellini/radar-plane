@@ -45,6 +45,9 @@ public class Relatorio {
 				}
 
 				InfoColisao info = Calculo.calcularColisao(aviaoA, aviaoB);
+				if (info == null) {
+					continue;
+				}
 
 				if (info.getDiferencaTempo() <= tempoMinimo) {
 

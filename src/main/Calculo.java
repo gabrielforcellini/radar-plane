@@ -128,8 +128,16 @@ public class Calculo {
 		x = l / j;
 		y = x + ia;
 
+		Aviao a2 = proximaPosicao(a);
+		Aviao b2 = proximaPosicao(b);
+
 		double distanciaA = distancia(x, y, a.getPontoX(), a.getPontoY());
+		double distanciaA2 = distancia(x, y, a2.getPontoX(), a2.getPontoY());
 		double distanciaB = distancia(x, y, b.getPontoX(), b.getPontoY());
+		double distanciaB2 = distancia(x, y, b2.getPontoX(), b2.getPontoY());
+		if (distanciaA2 > distanciaA || distanciaB2 > distanciaB){
+			return null;
+		}
 
 		double tempoA = converterSegundos(distanciaA / a.getVelocidade());
 		double tempoB = converterSegundos(distanciaB / b.getVelocidade());
@@ -146,6 +154,12 @@ public class Calculo {
 		info.setTempoColisao(formatarDecimal(tempoColisao));
 
 		return info;
+	}
+
+	private static Aviao proximaPosicao(Aviao a){
+		double dx = a.getVelocidade() * Math.cos(a.getDirecao());
+		double dy = a.getVelocidade() * Math.sin(a.getDirecao());
+		return new Aviao(-1, a.getPontoX()+dx, a.getPontoY()+dy, a.getRaio(), a.getAngulo(), a.getVelocidade(), a.getDirecao());
 	}
 
 	// converte horas em segundos (usado para calcular a velocidade)
